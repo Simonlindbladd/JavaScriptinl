@@ -10,16 +10,16 @@ const produkter = {
 
 let varukorg = [];
 
-// Array för att hålla reda på valda avdelningar
+
 let valdaAvdelningar = [];
 
-// Skapa knappar för sektionerna
+
 function createSectionButtons() {
     const sections = Object.keys(produkter).filter(section => !valdaAvdelningar.includes(section));
     const buttonsContainer = document.getElementById("buttonsContainer");
-    buttonsContainer.innerHTML = ""; // Rensa knapparna innan vi lägger till nya
+    buttonsContainer.innerHTML = ""; 
 
-    // Slumpar två avdelningar
+ 
     if (sections.length > 0) {
         const randomSections = sections.sort(() => 0.5 - Math.random()).slice(0, 2);
         randomSections.forEach(section => {
