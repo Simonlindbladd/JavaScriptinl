@@ -8,7 +8,6 @@ const produkter = {
     bröd: [["Baguette", 15], ["Knäckebröd", 10], ["Formbröd", 12]]
 };
 
-// Array för att spara varukorgens innehåll
 let varukorg = [];
 
 // Array för att hålla reda på valda avdelningar
