@@ -1,1 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 20px;
+}
 
+button {
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: gray; /* Grå färg för avdelningsknappar */
+    color: white; /* Vit textfärg */
+    border: none; /* Ingen kant */
+    border-radius: 12px; /* Rundade hörn */
+}
+
+.product-button {
+    background-color: lightgray; /* Ljusgrå färg för produktknappar */
+    color: black; /* Svart textfärg för produktknappar */
+    border: 1px solid #ccc; /* Liten kant runt produktknappar */
+    margin: 5px;
+    padding: 8px;
+    border-radius: 12px; /* Rundade hörn */
+}
+
+#cart {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+#thankYouMessage {
+    display: none; /* Dölj tack-meddelandet som standard */
+    font-size: 2em;
+    color: white;
+    background-color: #4CAF50; /* Grön bakgrund */
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    text-align: center;
+}

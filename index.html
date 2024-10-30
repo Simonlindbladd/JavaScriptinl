@@ -3,11 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript</title>
+    <title>Matbutik</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>hej</h1>
+    <h1>Välkommen till matbutiken!</h1>
+    
+    <div id="section">
+        <h2>Välj en avdelning:</h2>
+        <div id="buttonsContainer"></div> <!-- Dynamisk knapplista -->
+    </div>
+
+    <div id="products"></div>
+    
+    <div id="cart">
+        <h2>Varukorg:</h2>
+        <ul id="cart-items"></ul>
+    </div>
+
+    <button id="backButton" onclick="goBack()" style="display: none;">Tillbaka</button>
+    <button id="payButton" onclick="pay()" style="display: none;">Betala</button>
+
+    <div id="thankYouMessage" class="hidden">Tack för att du handlade!</div>
 </body>
 </html>
