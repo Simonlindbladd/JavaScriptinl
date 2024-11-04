@@ -24,7 +24,7 @@ function createSectionButtons() {
         const randomSections = sections.sort(() => 0.5 - Math.random()).slice(0, 2);
         randomSections.forEach(section => {
             const button = document.createElement("button");
-            button.textContent = section.charAt(0).toUpperCase() + section.slice(1); // Första bokstaven stor
+            button.textContent = section.charAt(0).toUpperCase() + section.slice(1); 
             button.onclick = () => showProducts(section);
             buttonsContainer.appendChild(button);
         });
@@ -33,8 +33,8 @@ function createSectionButtons() {
 
 // Funktion för att visa produkter
 function showProducts(sectionName) {
-    valdaAvdelningar.push(sectionName); // Lägg till den valda avdelningen
-    createSectionButtons(); // Skapa knappar för nya avdelningar
+    valdaAvdelningar.push(sectionName); 
+    createSectionButtons(); 
 
     const productsDiv = document.getElementById("products");
     productsDiv.innerHTML = `<h2>${sectionName.charAt(0).toUpperCase() + sectionName.slice(1)}</h2>`;
@@ -49,27 +49,27 @@ function showProducts(sectionName) {
 
     // Dölj sektionerna
     document.getElementById("section").style.display = "none"; 
-    document.getElementById("backButton").style.display = "block"; // Visa tillbaka-knappen
+    document.getElementById("backButton").style.display = "block"; 
 }
 
 // Funktion för att lägga till produkter i varukorgen
 function addToCart(product) {
-    varukorg.push(product); // Lägg till produktnamnet
+    varukorg.push(product); 
     updateCart();
 }
 
 // Uppdatera varukorgen
 function updateCart() {
     const cartItems = document.getElementById("cart-items");
-    cartItems.innerHTML = ""; // Rensa varukorgen innan vi uppdaterar
+    cartItems.innerHTML = ""; 
 
-    let totalPrice = 0; // Variabel för totalpris
+    let totalPrice = 0; 
 
     varukorg.forEach(item => {
         const li = document.createElement("li");
-        li.textContent = `${item[0]} - ${item[1]} kr`; // Visa produktnamnet och priset
+        li.textContent = `${item[0]} - ${item[1]} kr`;
         cartItems.appendChild(li);
-        totalPrice += item[1]; // Lägg till priset för totalen
+        totalPrice += item[1]; 
     });
 
     // Visa totalpriset
@@ -77,15 +77,15 @@ function updateCart() {
     totalLi.textContent = `Totalt: ${totalPrice} kr`;
     cartItems.appendChild(totalLi);
 
-    document.getElementById("payButton").style.display = "block"; // Visa betalknappen
+    document.getElementById("payButton").style.display = "block"; 
 }
 
 // Betala och visa tack-meddelandet
 function pay() {
-    document.getElementById("thankYouMessage").style.display = "block"; // Visa tack-meddelandet
-    document.getElementById("cart").style.display = "none"; // Dölj varukorgen
-    document.getElementById("products").innerHTML = ""; // Rensa produktvisningen
-    document.getElementById("section").style.display = "none"; // Dölj avdelningarna
+    document.getElementById("thankYouMessage").style.display = "block"; 
+    document.getElementById("cart").style.display = "none"; 
+    document.getElementById("products").innerHTML = ""; 
+    document.getElementById("section").style.display = "none"; 
 }
 
 // Gå tillbaka till avdelningar
@@ -93,14 +93,14 @@ function goBack() {
     if (varukorg.length > 0) {
         // Om användaren har lagt till produkter, visa två nya avdelningar
         createSectionButtons();
-        document.getElementById("backButton").style.display = "none"; // Dölj tillbaka-knappen
-        document.getElementById("products").innerHTML = ""; // Rensa produktvisningen
-        document.getElementById("section").style.display = "block"; // Visa avdelningarna
+        document.getElementById("backButton").style.display = "none"; 
+        document.getElementById("products").innerHTML = ""; 
+        document.getElementById("section").style.display = "block";
     } else {
         // Annars, om ingen produkt har lagts till, gå tillbaka till avdelningar
         createSectionButtons();
-        document.getElementById("backButton").style.display = "none"; // Dölj tillbaka-knappen
-        document.getElementById("section").style.display = "block"; // Visa avdelningarna
+        document.getElementById("backButton").style.display = "none"; 
+        document.getElementById("section").style.display = "block";
     }
 }
 
