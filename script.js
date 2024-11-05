@@ -4,7 +4,7 @@ const produkter = {
     frys: [["Frysta ärtor", 15], ["Fryst lax", 30], ["Frysta hallon", 20]],
     torrvaror: [["Ris", 10], ["Pasta", 8], ["Bönor", 12]],
     hushåll: [["Diskmedel", 25], ["Toalettpapper", 40], ["Tvättmedel", 30]],
-    bröd: [["Baguette", 15], ["Knäckebröd", 10], ["Formbröd", 12]]
+    bröd: [["Baguette", 15], ["Knäckebröd", 10], ["Bröd", 12]]
 };
 
 let varukorg = [];
