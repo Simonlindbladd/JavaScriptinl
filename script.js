@@ -90,7 +90,7 @@ function pay() {
 // Gå tillbaka till avdelningar
 function goBack() {
     if (varukorg.length > 0) {
-        // Om användaren har lagt till produkter, visa två nya avdelningar
+        // Visa två nya avdelningar
         createSectionButtons();
         document.getElementById("backButton").style.display = "none"; 
         document.getElementById("products").innerHTML = ""; 
