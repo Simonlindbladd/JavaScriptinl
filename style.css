@@ -1,6 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    font-family: kanit;
+    background-color: bisque;
     text-align: center;
     padding: 20px;
 }
@@ -11,17 +11,17 @@ button {
     cursor: pointer;
     background-color: gray; 
     color: white; 
-    border: none; 
     border-radius: 12px; 
+    border-color: black;
 }
 
 .product-button {
     background-color: lightgray; 
     color: black; 
-    border: 1px solid #ccc; 
     margin: 5px;
     padding: 8px;
     border-radius: 12px; 
+    border-color: black;
 }
 
 #cart {
@@ -45,3 +45,4 @@ button {
     z-index: 1000;
     text-align: center;
 }
+
