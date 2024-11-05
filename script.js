@@ -1,7 +1,6 @@
-// Representera produkter i olika sektioner
 const produkter = {
     frukter: [["Banan", 10], ["Äpple", 12], ["Apelsin", 8]],
-    grönsaker: [["Sallad", 5], ["Morot", 3], ["Broccoli", 7]],
+    grönsaker: [["Sallad", 5], ["Morot", 6], ["Broccoli", 8]],
     frys: [["Frysta ärtor", 15], ["Fryst lax", 30], ["Frysta hallon", 20]],
     torrvaror: [["Ris", 10], ["Pasta", 8], ["Bönor", 12]],
     hushåll: [["Diskmedel", 25], ["Toalettpapper", 40], ["Tvättmedel", 30]],
@@ -52,7 +51,7 @@ function showProducts(sectionName) {
     document.getElementById("backButton").style.display = "block"; 
 }
 
-// Funktion för att lägga till produkter i varukorgen
+// Lägga till produkter i varukorgen
 function addToCart(product) {
     varukorg.push(product); 
     updateCart();
@@ -80,7 +79,7 @@ function updateCart() {
     document.getElementById("payButton").style.display = "block"; 
 }
 
-// Betala och visa tack-meddelandet
+// Betala och tack-meddelandet
 function pay() {
     document.getElementById("thankYouMessage").style.display = "block"; 
     document.getElementById("cart").style.display = "none"; 
@@ -97,7 +96,7 @@ function goBack() {
         document.getElementById("products").innerHTML = ""; 
         document.getElementById("section").style.display = "block";
     } else {
-        // Annars, om ingen produkt har lagts till, gå tillbaka till avdelningar
+        // Om ingen produkt har lagts till, gå tillbaka till avdelningar
         createSectionButtons();
         document.getElementById("backButton").style.display = "none"; 
         document.getElementById("section").style.display = "block";

@@ -9,19 +9,19 @@ button {
     margin: 5px;
     padding: 10px;
     cursor: pointer;
-    background-color: gray; /* Grå färg för avdelningsknappar */
-    color: white; /* Vit textfärg */
-    border: none; /* Ingen kant */
-    border-radius: 12px; /* Rundade hörn */
+    background-color: gray; 
+    color: white; 
+    border: none; 
+    border-radius: 12px; 
 }
 
 .product-button {
-    background-color: lightgray; /* Ljusgrå färg för produktknappar */
-    color: black; /* Svart textfärg för produktknappar */
-    border: 1px solid #ccc; /* Liten kant runt produktknappar */
+    background-color: lightgray; 
+    color: black; 
+    border: 1px solid #ccc; 
     margin: 5px;
     padding: 8px;
-    border-radius: 12px; /* Rundade hörn */
+    border-radius: 12px; 
 }
 
 #cart {
@@ -31,10 +31,10 @@ button {
 }
 
 #thankYouMessage {
-    display: none; /* Dölj tack-meddelandet som standard */
+    display: none; 
     font-size: 2em;
     color: white;
-    background-color: #4CAF50; /* Grön bakgrund */
+    background-color: #4CAF50; 
     padding: 20px;
     position: absolute;
     top: 50%;
