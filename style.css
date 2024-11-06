@@ -15,6 +15,21 @@ button {
     border-color: black;
 }
 
+button:hover {
+    background-color: darkgray;
+}
+
+#backButton {
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#backButton:hover {
+    background-color: darkgray;
+}
+
 .product-button {
     background-color: lightgray; 
     color: black; 
@@ -24,11 +39,31 @@ button {
     border-color: black;
 }
 
+
+
 #cart {
+    float: right; 
     margin-top: 20px;
     border: 1px solid #ccc;
     padding: 10px;
+    width: 200px; 
 }
+
+#payButton {
+    float: right; 
+    margin-top: 20px; 
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+#payButton:hover {
+    background-color: #45a049; 
+}
+
 
 #thankYouMessage {
     display: none; 

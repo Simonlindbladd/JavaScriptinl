@@ -18,17 +18,18 @@
         <div id="buttonsContainer"></div> 
     </div>
 
-    <div 
-        id="products">
-    </div>
+    <div id="products"></div>
     
     <div id="cart">
         <h2>Varukorg:</h2>
         <ul id="cart-items"></ul>
     </div>
 
+    <div id="payButtonContainer">
+        <button id="payButton" onclick="pay()" style="display: none;">Betala</button>
+    </div>
+    
     <button id="backButton" onclick="goBack()" style="display: none;">Tillbaka</button>
-    <button id="payButton" onclick="pay()" style="display: none;">Betala</button>
 
     <div id="thankYouMessage" class="hidden">Tack för att du handlade!</div>
 </body>

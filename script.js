@@ -1,3 +1,4 @@
+// Produkter
 const produkter = {
     frukter: [["🍌 Banan", 10], ["🍏 Äpple", 12], ["🍊 Apelsin", 8]],
     grönsaker: [["🥗 Sallad", 5], ["🥕 Morot", 6], ["🥦 Broccoli", 8]],
@@ -7,13 +8,13 @@ const produkter = {
     bröd: [["🥖 Baguette", 15], ["🍞 Bröd", 12]]
 };
 
-
+// variabel håller reda på alla produkter som användaren lägger i sin varukorg.
 let varukorg = [];
 
-
+// variabel håller reda på vilka avdelningar användaren har valt.
 let valdaAvdelningar = [];
 
-
+// filtrerar bort redan valda
 function createSectionButtons() {
     const sections = Object.keys(produkter).filter(section => !valdaAvdelningar.includes(section));
     const buttonsContainer = document.getElementById("buttonsContainer");
@@ -31,7 +32,7 @@ function createSectionButtons() {
     }
 }
 
-// Funktion för att visa produkter
+// Visar produkter
 function showProducts(sectionName) {
     valdaAvdelningar.push(sectionName); 
     createSectionButtons(); 
@@ -47,7 +48,7 @@ function showProducts(sectionName) {
         productsDiv.appendChild(productButton);
     });
 
-    // Dölj sektionerna
+    // Dölj sektionerna när man klickar på avdelning
     document.getElementById("section").style.display = "none"; 
     document.getElementById("backButton").style.display = "block"; 
 }
@@ -104,5 +105,5 @@ function goBack() {
     }
 }
 
-// Initiera sektioner när sidan laddas
+// skapar knappar för att välja olika sektioner
 createSectionButtons();
