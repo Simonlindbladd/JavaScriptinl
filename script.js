@@ -8,19 +8,16 @@ const produkter = {
     bröd: [["🥖 Baguette", 15], ["🍞 Bröd", 12]]
 };
 
-// variabel håller reda på alla produkter som användaren lägger i sin varukorg.
+// Variabler för att hålla reda på valda produkter och avdelningar
 let varukorg = [];
-
-// variabel håller reda på vilka avdelningar användaren har valt.
 let valdaAvdelningar = [];
 
-// filtrerar bort redan valda
+// Skapar knappar för att välja avdelningar och filtrerar bort redan valda
 function createSectionButtons() {
     const sections = Object.keys(produkter).filter(section => !valdaAvdelningar.includes(section));
     const buttonsContainer = document.getElementById("buttonsContainer");
     buttonsContainer.innerHTML = ""; 
 
- 
     if (sections.length > 0) {
         const randomSections = sections.sort(() => 0.5 - Math.random()).slice(0, 2);
         randomSections.forEach(section => {
@@ -32,7 +29,7 @@ function createSectionButtons() {
     }
 }
 
-// Visar produkter
+// Visar produkter i den valda avdelningen
 function showProducts(sectionName) {
     valdaAvdelningar.push(sectionName); 
     createSectionButtons(); 
@@ -48,18 +45,17 @@ function showProducts(sectionName) {
         productsDiv.appendChild(productButton);
     });
 
-    // Dölj sektionerna när man klickar på avdelning
     document.getElementById("section").style.display = "none"; 
     document.getElementById("backButton").style.display = "block"; 
 }
 
-// Lägga till produkter i varukorgen
+// Lägger till produkter i varukorgen
 function addToCart(product) {
     varukorg.push(product); 
-    updateCart();
+    updateCart();  // Uppdaterar varukorgen när en produkt läggs till
 }
 
-// Uppdatera varukorgen
+// Uppdaterar varukorgen
 function updateCart() {
     const cartItems = document.getElementById("cart-items");
     cartItems.innerHTML = ""; 
@@ -78,32 +74,33 @@ function updateCart() {
     totalLi.textContent = `Totalt: ${totalPrice} kr`;
     cartItems.appendChild(totalLi);
 
-    document.getElementById("payButton").style.display = "block"; 
+    // Gör "Betala" knappen synlig om det finns produkter i varukorgen
+    if (varukorg.length > 0) {
+        document.getElementById("payButton").style.display = "block";
+    }
 }
 
-// Betala och tack-meddelandet
+// Betalningsfunktion och tack meddelande
 function pay() {
-    document.getElementById("thankYouMessage").style.display = "block"; 
-    document.getElementById("cart").style.display = "none"; 
-    document.getElementById("products").innerHTML = ""; 
-    document.getElementById("section").style.display = "none"; 
+    document.getElementById("thankYouMessage").style.display = "block"; // Visa tack-meddelandet
+    document.getElementById("cart").style.display = "none"; // Dölj varukorgen
+    document.getElementById("products").innerHTML = ""; // Rensa produktvisningen
+    document.getElementById("section").style.display = "none"; // Dölj sektionen
 }
 
 // Gå tillbaka till avdelningar
 function goBack() {
     if (varukorg.length > 0) {
-        // Visa två nya avdelningar
         createSectionButtons();
         document.getElementById("backButton").style.display = "none"; 
         document.getElementById("products").innerHTML = ""; 
         document.getElementById("section").style.display = "block";
     } else {
-        // Om ingen produkt har lagts till, gå tillbaka till avdelningar
         createSectionButtons();
         document.getElementById("backButton").style.display = "none"; 
         document.getElementById("section").style.display = "block";
     }
 }
 
-// skapar knappar för att välja olika sektioner
+// Skapar knappar för att välja olika avdelningar
 createSectionButtons();
