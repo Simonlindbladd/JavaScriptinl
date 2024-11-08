@@ -40,13 +40,14 @@ button:hover {
 }
 
 
-
 #cart {
     float: right; 
     margin-top: 20px;
-    border: 1px solid #ccc;
+    border: 2px solid darkgray;
+    border-radius: 7px;
+    box-shadow: 5px 5px lightgray;
     padding: 10px;
-    width: 200px; 
+    width: 250px; 
 }
 
 #payButton {
