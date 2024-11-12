@@ -86,12 +86,9 @@ function updateCart() {
     }
 }
 
-// Betalningsfunktion och tack meddelande
+// Tack meddelande
 function pay() {
-    document.getElementById("thankYouMessage").style.display = "block"; // Visa tack-meddelandet
-    document.getElementById("cart").style.display = "none"; // Dölj varukorgen
-    document.getElementById("products").innerHTML = ""; // Rensa produktvisningen
-    document.getElementById("section").style.display = "none"; // Dölj sektionen
+    document.getElementById("thankYouMessage").style.display = "block";
 }
 
 // Gå tillbaka till avdelningar
