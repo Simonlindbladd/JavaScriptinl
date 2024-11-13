@@ -1,17 +1,45 @@
 // Produkter
 const produkter = {
-    frukter: [["🍌 Banan", 10], ["🍏 Äpple", 12], ["🍊 Apelsin", 8]],
-    grönsaker: [["🥗 Sallad", 5], ["🥕 Morot", 6], ["🥦 Broccoli", 8]],
-    frys: [["🫛 Frysta ärtor", 15], ["🐟 Fryst lax", 78], ["🍇 Frysta hallon", 20]],
-    kylvaror: [["🥛 Mjölk", 12], ["🧃 Äppeljuice", 38], ["🧈 Smör", 23]],
-    torrvaror: [["🍚 Ris", 10], ["🍝 Pasta", 8], ["🥫 Bönor", 12]],
-    hushåll: [["🧴 Diskmedel", 25], ["🧻 Toalettpapper", 40], ["🧺 Tvättmedel", 30]],
-    bröd: [["🥖 Baguette", 15], ["🍞 Bröd", 12]],
-    godis: [["🍫 Marabou", 25], ["🍬 Godis", 15],],
-    drycker: [["🥤 Läsk", 18], ["🍺 Öl", 12], ["💧Vatten", 10]],
-    snacks: [["🍿 Popcorn", 15], ["🥜 Nötter", 35], ["🍟 Chips", 20]]
+    frukter: [
+        ["🍌 Banan", 10],
+        ["🍏 Äpple", 12],
+        ["🍊 Apelsin", 8]
+    ],grönsaker: [
+        ["🥗 Sallad", 5],
+        ["🥕 Morot", 6],
+        ["🥦 Broccoli", 8]
+    ],frys: [
+        ["🫛 Frysta ärtor", 15],
+        ["🐟 Fryst lax", 78],
+        ["🍇 Frysta hallon", 20]
+    ],kylvaror: [
+        ["🥛 Mjölk", 12],
+        ["🧃 Äppeljuice", 38],
+        ["🧈 Smör", 23]
+    ],torrvaror: [
+        ["🍚 Ris", 10],
+        ["🍝 Pasta", 8],
+        ["🥫 Bönor", 12]
+    ],hushåll: [
+        ["🧴 Diskmedel", 25],
+        ["🧻 Toalettpapper", 40],
+        ["🧺 Tvättmedel", 30]
+    ],bröd: [
+        ["🥖 Baguette", 15],
+        ["🍞 Bröd", 12]
+    ],godis: [
+        ["🍫 Marabou", 25],
+        ["🍬 Godis", 15]
+    ],drycker: [
+        ["🥤 Läsk", 18],
+        ["🍺 Öl", 12],
+        ["💧 Vatten", 10]
+    ],snacks: [
+        ["🍿 Popcorn", 15],
+        ["🥜 Nötter", 35],
+        ["🍟 Chips", 20]
+    ]
 };
-
 
 // Variabler för att hålla reda på valda produkter och avdelningar
 let varukorg = [];

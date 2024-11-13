@@ -17,14 +17,19 @@ Krav för godkänt:
 [X]Information till användaren presenteras på sidan med text, bild, ljud eller videos.
 [X]Textfält eller knappar ska läggas till så användaren kan interagera med din värld.
 [X]Det ska finnas flera olika vägval för användaren att göra i din värld.
-[]Du ska på något sätt använda dig av en array, ex. för att representera världen.
+[X]Du ska på något sätt använda dig av en array, ex. för att representera världen.
 [X]Git & GitHub har använts
 [X]Projektmappen innehåller en README.md fil - (läs ovan för mer info)
 
 Uppgiften lämnas in i tid!
 Krav för väl godkänt:
 
-[]Alla punkter för godkänt är uppfyllda
-[]Användaren ska kunna plocka upp och bära på flera föremål för att ta sig vidare.
+[X]Alla punkter för godkänt är uppfyllda
+[X]Användaren ska kunna plocka upp och bära på flera föremål för att ta sig vidare.
 []Förändringar ska sparas till Local Storage så användaren kan fortsätta efter en reload.
 []Alla globala funktioner, listor och objekt är strukturerade och namngivna väl samt dokumenterade med JS-doc.
+
+NOTE:
+
+Jag har försökt att lägga in en bakgrundsbild men blev inte alls nöjd med den så valde att hålla det simpelt med en enkel bagrundsfärg men ha en liten bild i hörnet för att få lite känsla.
+Jag har i första hand försökt att få grepp om hur JS fungerar och försökt att få ihop det så allt ska flyta på som jag vill, det tog ett tag att få fram rätt varukorg och hur den ska lägga till produkter och hur den räknar ut totalpriset, CS50 via harvard på youtube fick mig att någurlunda förstå hur variabler och funktioner funkar för att ta mig vidare i denna uppgift och förstå lite mer under tiden jag har suttit med min uppgift.
