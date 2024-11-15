@@ -1,5 +1,8 @@
 # JavaScriptinl
 
+Rubrik, Simons livs
+I denna demo ska användaren kunna gå och välja egna avdelningar i en matbutik och lägga till produkter i varje avdselning som hamnar i en varukorg där totalpris visas och sen klicka på "betala".
+
 länk till sidan: https://simonlindbladd.github.io/JavaScriptinl/
 
 En interaktiv upplevelse i din värld.
